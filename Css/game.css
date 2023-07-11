@@ -1,0 +1,290 @@
+body {
+  background: radial-gradient(circle, #fea477 20%, #ff5e62 100%) center / cover no-repeat fixed;
+  /* #36D1DC #5B86E5 */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.cont {
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 35%;
+}
+
+.game {
+  margin-top: 50px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #ffcdb3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffcdb3;
+  border-radius: 30px;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.game .game-part {
+
+  min-height: 50vh;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.game header {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+
+header i {
+  color: #ffb522;
+}
+
+
+.higher-score {
+  height: 50px;
+  width: 200px;
+  font-size: 25px;
+}
+
+.your-score {
+  height: 50px;
+  width: 200px;
+  font-size: 25px;
+}
+
+
+.time-bar-div {
+  height: 4px;
+  background: #fff;
+  border-radius: 3px;
+  width: 200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.time-bar-div span {
+  display: block;
+  height: 100%;
+  background: #ffb522;
+
+}
+
+.time-div {
+  text-align: center;
+}
+
+.time-div p {
+  font-size: 1.7rem;
+  font-weight: 600;
+
+}
+
+.word-div p {
+  position: relative;
+  margin: 2 1.5px;
+  font-size: 50px;
+  color: #001487;
+
+}
+
+.word-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+span,
+p {
+  font-family: Delicious Handrawn;
+}
+
+
+
+.ha-screen-reader {
+  width: var(--ha-screen-reader-width, 1px);
+  height: var(--ha-screen-reader-height, 1px);
+  padding: var(--ha-screen-reader-padding, 0);
+  border: var(--ha-screen-reader-border, none);
+
+  position: var(--ha-screen-reader-position, absolute);
+  clip: var(--ha-screen-reader-clip, rect(1px, 1px, 1px, 1px));
+  overflow: var(--ha-screen-reader-overflow, hidden);
+}
+
+
+.field__input {
+  --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  font-family: Delicious Handrawn;
+  font-size: 30px;
+  width: 200px;
+}
+
+.field__input:focus::-webkit-input-placeholder {
+  color: var(--uiFieldPlaceholderColor);
+}
+
+.field__input:focus::-moz-placeholder {
+  color: var(--uiFieldPlaceholderColor);
+}
+
+.field {
+  --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
+  --uiFieldPaddingRight: var(--fieldPaddingRight, 1rem);
+  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 1rem);
+  --uiFieldBorderColorActive: var(--fieldBorderColorActive, rgba(22, 22, 22, 1));
+
+  display: var(--fieldDisplay, inline-flex);
+  position: relative;
+  font-size: var(--fieldFontSize, 1rem);
+}
+
+.field__input {
+
+  padding: var(--fieldPaddingTop, 1.5rem) var(--uiFieldPaddingRight) var(--fieldPaddingBottom, .5rem) var(--uiFieldPaddingLeft);
+  border-bottom: var(--uiFieldBorderWidth) solid var(--fieldBorderColor, rgba(0, 0, 0, .25));
+}
+
+.field__input:focus {
+  outline: none;
+}
+
+.field__input::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.field__input::-moz-placeholder {
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.field__input:focus::-webkit-input-placeholder {
+  opacity: 1;
+  transition-delay: .2s;
+}
+
+.field__input:focus::-moz-placeholder {
+  opacity: 1;
+  transition-delay: .2s;
+}
+
+.field__label-wrap {
+  box-sizing: border-box;
+  pointer-events: none;
+  cursor: text;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.field__label-wrap::after {
+  content: "";
+  box-sizing: border-box;
+  width: 85%;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 33px;
+}
+
+.field__input:focus~.field__label-wrap::after {
+  opacity: 1;
+}
+
+.field__label {
+  position: absolute;
+  left: var(--uiFieldPaddingLeft);
+  top: calc(50% - .5em);
+  font-size: 30px;
+  line-height: 1;
+  transition: top .2s cubic-bezier(0.9, -0.15, 0.1, 1.15), opacity .2s ease-out, font-size .2s ease-out;
+  margin-left: 50px;
+}
+
+.field__input:focus~.field__label-wrap .field__label,
+.field__input:not(:placeholder-shown)~.field__label-wrap .field__label {
+  --fieldHintFontSize: var(--fieldHintFontSizeFocused, .75rem);
+
+  top: var(--fieldHintTopHover, .25rem);
+}
+
+.field_v1 .field__label-wrap::after {
+  border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColorActive);
+  transition: opacity .2s ease-out;
+}
+
+.field_v1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.Yw_Go{
+  font-size: 150px;
+  color: #ff5e62;
+  font-family: Delicious Handrawn;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  margin: 50px;
+}
+#game_over, #you_win{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a{
+  margin-left: 50px;
+  height: 75%;
+  width: 100%;
+}
+.voice_icon{
+  width: 500px;
+  height: 250px;
+}
+.fa-beat{
+  width: 500px;
+  height: 250px;
+}
+.icon{
+  height: 200px;
+  width: 200px;
+  transition:  all 0.25s ease-in-out;
+  translate: 0px -10px;
+}
+.voicee{
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 100px;
+}

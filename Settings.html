@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./Assets/Img/typing.png">
+    <link rel="stylesheet" href="Css/Settings.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Inter&family=Lora&family=M+PLUS+Rounded+1c:wght@500&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,900&display=swap">
+    <script src="https://kit.fontawesome.com/fffd17f093.js" crossorigin="anonymous"></script>
+    <title>Fast Fingers</title>
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+            <h2>Settings</h2>
+
+            <div class="switch-holder1">
+                <h4>Select the language</h4>
+                <div class="switch">
+                    <div class="switch-label1">
+                        <img src="Assets/Img/armenia.png" alt="" class="flag">
+                    </div>
+                    <div class="switch-toggle1">
+                        <input type="checkbox" id="language" />
+                        <label for="language"></label>
+                    </div>
+                    <div class="switch-label1">
+                        <img src="Assets/Img/usa.png" alt="" class="flag">
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="switch-holder">
+                <div class="switch-label">
+                    <i class="fa-solid fa-music"></i>
+                    <span>Music</span>
+                </div>
+                <div class="switch-toggle">
+                    <input type="checkbox" id="music"/>
+                    <label for="music" onclick="play()"></label>
+                </div>
+            </div>
+            <a href="index.html"><button class="back"><i class="fa fa-arrow-left" onclick="f()"></i></button></a>
+        </div>
+    </div>
+    <audio id="mySong">
+        <source src="./Assets/Voice/backgroundMusic.mp3" type="audio/mp3">
+    </audio>
+    <script src="./Script/music.js"></script>
+</body>
+</html>

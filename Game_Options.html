@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/Game_Options.css">
+    <link rel="stylesheet" href="Css/game.css">
+    <link rel="icon" type="image/x-icon" href="./Assets/Img/typing.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Inter&family=Lora&family=M+PLUS+Rounded+1c:wght@500&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,900&display=swap">
+    <script src="https://kit.fontawesome.com/fffd17f093.js" crossorigin="anonymous"></script>
+    <title>Fast Fingers</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="center" id="center">
+            <h2>Choose how to play</h2>
+            <div class="options">
+
+                <button class="option" id="play" onclick="voicestart()">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <h4>With <span>Sound</span></h4>
+                </button>
+
+
+
+                <button class="option" id="play" onclick="start()">
+                    <i class="fa-solid fa-pen"></i>
+                    <h4>With <span>Words</span></h4>
+                </button>
+
+            </div>
+            <a href="index.html"><button class="back"><i class="fa fa-arrow-left"></i></button></a>
+
+        </div>
+
+        <div id="countdown" style="display: none">
+            <h1 id="startcount"></h1>
+        </div>
+
+        <div class="game" style="display: none" id="game">
+            <div class="game-part">
+                <header>
+                    <div class="your-score">
+                        <p>Your&nbsp;Score</p>
+                        <p>
+                            <i class="fa-solid fa-diamond"></i>
+                            <span class="score" id="score"></span>
+                        </p>
+                    </div>
+                    <div class="higher-score">
+                        <p>High&nbsp;Score</p>
+                        <p>
+                            <i class="fa-solid fa-diamond"></i>
+                            <span class="high-score" id="highScore"></span>
+                        </p>
+                    </div>
+                </header>
+
+                <div class="word-div">
+                    <p class="info-text" id="word" oncopy="return false"></p>
+                </div>
+
+                <div class="field field_v1">
+                    <input type="text" id="firstname" class="field__input" placeholder=" " onpast="return false">
+                    <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label"></span>
+                    </span>
+                </div>
+
+                <div class="time-div" id="timer">
+                    <div class="time-bar-div">
+                        <span class="time-bar"></span>
+                    </div>
+                    <p><span id="count" class="time" style="font-size: 50px;">5</span></p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="game" id="voiice" style="display: none" >
+            <div class="game-part">
+                <header>
+                    <div class="your-score">
+                        <p>Your&nbsp;Score</p>
+                        <p>
+                            <i class="fa-solid fa-diamond"></i>
+                            <span class="score" id="score1"></span>
+                        </p>
+                    </div>
+                    <div class="higher-score">
+                        <p>High&nbsp;Score</p>
+                        <p>
+                            <i class="fa-solid fa-diamond"></i>
+                            <span class="high-score" id="highScore1"></span>
+                        </p>
+                    </div>
+                </header>
+
+                <div class="voicee">
+                    <img src="./Assets/Img/sound.png" alt="" class="icon">
+                </div>
+
+                <div class="field field_v1">
+                    <input type="text" id="firstname1" class="field__input" placeholder=" " onpast="return false">
+                    <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label"></span>
+                    </span>
+                </div>
+
+                <div class="time-div" id="timer">
+                    <div class="time-bar-div">
+                        <span class="time-bar"></span>
+                    </div>
+                    <p><span id="time" class="time" style="font-size: 50px;">5</span></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="game_over" style="display: none;">
+            <h1 class="Yw_Go">Game Over</h1>
+            <div class="btns">
+                <a href="index.html"><button class="back"><i class="fa fa-arrow-left"></i></button></a>
+                <a href="Game_Options.html" class="a"><button class="PA">Play Again</button></a>
+            </div>
+        </div>
+
+        <div id="you_win" style="display: none;">
+            <h1 class="Yw_Go">You Win</h1>
+            <div class="btns">
+                <a href="index.html"><button class="back"><i class="fa fa-arrow-left"></i></button></a>
+                <a href="Game_Options.html" class="a"><button class="PA">Play Again</button></a>
+            </div>
+        </div>
+    </div>
+    <script src="Script/voice.js"></script>
+    <script src="Script/script.js"></script>
+    <script src="Script/Timer.js"></script>
+</body>
+
+</html>
