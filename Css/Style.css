@@ -90,25 +90,13 @@ a {
   .center {
     display: none;
   }
-  .err{
-    display: block !important;
-  }
   .error {
+    display: block !important;
     text-align: center;
     font-size: 50px;
     letter-spacing: 1px;
     line-height: 60px;
     font-family: Delicious Handrawn;
-    color: #ff5e62;
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
-  }
-  .oops{
-    font-size: 100px;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 60px;
-    font-weight: 200;
-    font-family: 'Montserrat', sans-serif;
     color: #ff5e62;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
   }
